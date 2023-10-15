@@ -1,1 +1,101 @@
 
+* {
+  opacity: 1;
+  transition: opacity .6s;
+  scroll-behavior: smooth;
+}
+
+button { 
+  padding: 10px 20px; 
+  border: 1px solid #b2b2b2; 
+  outline: none; 
+  border-radius: 18px; 
+  color: white; 
+  font-size: 18px; 
+  cursor: pointer; 
+  margin-top: 15px; 
+  margin-bottom: 10px; 
+  background-image: linear-gradient(45deg,#ed0029,blue); 
+  animation: smoothopen .4s;
+  transition: 0.3s background-color; 
+  transition: position 1s;
+} 
+
+button:hover { 
+  background-color: #008000; 
+} 
+
+#qr-shaded-region {
+  border-color: transparent !important;
+  border-radius: 58px;
+  border-width: 44px 66px !important;
+  margin: auto;
+
+}
+
+.qr-container {
+  margin: auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#qr-reader{
+  margin: auto;
+  border-radius: 25px;
+  border: none ;
+  animation: smoothopen .4s;
+
+}
+
+#qr-reader video {
+  border-radius: 58px;
+  animation: smoothopen .4s;
+  max-width: 320px;
+  height: auto;
+  margin: auto;
+
+}
+#qr-shaded-region div {
+  background-color: rgb(235 218 0) !important;
+}
+
+#pigmy-act-no input {
+  padding: 4px;
+  width: 220px;
+  border: none;
+  border-bottom: 2px solid purple;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(70, 0, 66);
+  font-weight: 700;
+  outline: none;
+}
+
+#qr-reader__scan_region img {
+  position: relative;
+  animation: shakemobile linear infinite 5s;
+}
+
+#qr-reader__scan_region {
+  animation: smoothopen 4s;
+  animation-delay: 1s;
+
+
+}
+
+#html5-qrcode-anchor-scan-type-change {
+  display: none !important;
+}
+
+@keyframes smoothopen {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes shakemobile {
+  0%{transform: rotate(-25deg);left:5px;top: 18px;}
+  25%{transform: rotate(10deg);left: -25px;top: 14px;}
+  50%{transform: rotate(20deg);right: 25px;top: -9px;}
+  50%{transform: rotate(-10deg);right: -25px;top: -9px;}
+  100%{transform: rotate(-25deg);left: 5px;top: 18px;}
+}
