@@ -99,6 +99,29 @@ button:hover {
   }
 }
 
+#qr-reader__dashboard_section_csr span {
+  display: block;
+}
+
+#qr-reader__dashboard_section_csr select {
+  border: none;
+  color: #36363643;
+  outline: none;
+  user-select: none ;
+}
+
+#qr-reader__dashboard_section_csr select option {
+  border: none;
+  outline: none;
+  color: black;
+  background-color: rgba(114, 112, 112, 0.331);
+}
+#qr-reader__dashboard_section_csr select option :focus {
+  background-color: pink;
+}
+
+
+
 @keyframes shakemobile {
   0% {
     transform: rotate(-25deg);
