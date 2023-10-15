@@ -4,7 +4,7 @@ function domReady(fn) {
         document.readyState === "interactive"
     ) {
     alert('ready')
-        setTimeout(fn, 1);
+        setTimeout(fn, 6000);
     } else {
         alert('ready2')
         document.addEventListener("DOMContentLoaded", fn);
