@@ -16,6 +16,7 @@
         }
         #reader {
             width: 600px;
+            border: none !important;
         }
         #result {
             text-align: center;
@@ -23,7 +24,25 @@
         }
         #qr-shaded-region {
             border-width: 54px 123px !important;
+            border-radius: 22px;
         }
+
+       #reader video {
+        width: 100% !important;
+        border-radius: 22px;
+       }
+
+       #reader > div > div img {
+        display: none;
+       }
+
+       #reader__dashboard_section div:last-child {
+        display: none;
+       }
+
+       #reader img{
+        display: none;
+       }
       </style>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       
@@ -73,4 +92,3 @@
     
 </body>
 </html>
-
