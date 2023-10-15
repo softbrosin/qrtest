@@ -2,39 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Softbros-QR</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Softbros-QR</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="qr-container">
-        <h1>Softbros QR</h1>
-        <div id="qr-reader" style="width:500px"></div>
-        <div id="qr-reader-results"></div>
-        <div id="pigmy-act-no">
-            <input type="tel" placeholder="Account No">
-        </div>
-    </div>
-    <script src="qrLogic.js"></script>
-    <script>
-        var resultContainer = document.getElementById('qr-reader-results');
-        var lastResult, countResults = 0;
+	<div class="qr-container">
+		<div class="head">
+			<h1>Softbros QR</h1>
+		</div>
+		<div class="qrscreen">
+			<div id="qr-reader" style="width:500px"></div>
+			<div id="qr-reader-results"></div>
+		</div>
+		<div id="pigmy-act-no">
+			<input type="tel" placeholder="Account No">
+		</div>
+	</div>
+	<script src="qrLogic.js"></script>
+	<script>
+		var resultContainer = document.getElementById('qr-reader-results');
+		var lastResult, countResults = 0;
 
-        function onScanSuccess(decodedText, decodedResult) {
-            if (decodedText !== lastResult) {
-                ++countResults;
-                lastResult = decodedText;
-                // Handle on success condition with the decoded message.
-                document.querySelector('#pigmy-act-no input').value = decodedText, decodedResult;
-                document.querySelector('#html5-qrcode-button-camera-stop').click();
-            }
-        }
-        var html5QrcodeScanner = new Html5QrcodeScanner(
-            "qr-reader", { fps: 10, qrbox: 250 });
-        html5QrcodeScanner.render(onScanSuccess);
-    </script>
+		function onScanSuccess(decodedText, decodedResult) {
+			if (decodedText !== lastResult) {
+				++countResults;
+				lastResult = decodedText;
+				// Handle on success condition with the decoded message.
+				document.querySelector('#pigmy-act-no input').value = decodedText, decodedResult;
+				document.querySelector('#html5-qrcode-button-camera-stop').click();
+			}
+		}
+		var html5QrcodeScanner = new Html5QrcodeScanner(
+			"qr-reader", { fps: 10, qrbox: 250 });
+		html5QrcodeScanner.render(onScanSuccess);
+	</script>
 </body>
 
 </html>
