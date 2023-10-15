@@ -17,28 +17,29 @@
   border: none;
 } 
 
-#my-qr-reader__scan_region {
+#qr-reader__scan_region {
   background-image: url(asset/tenor.gif);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-#my-qr-reader__scan_region img {
+#qr-reader__scan_region img {
   display: none;
 }
 
-#my-qr-reader { 
+#qr-reader { 
   padding: 0 !important; 
   border: 0 !important; 
   border-radius: 8px; 
+  margin: auto;
 } 
 
-#my-qr-reader img[alt="Info icon"] { 
+#qr-reader img[alt="Info icon"] { 
   display: none; 
 } 
 
-#my-qr-reader img[alt="Camera based scan"] { 
+#qr-reader img[alt="Camera based scan"] { 
   width: 100px !important; 
   height: 100px !important; 
 } 
@@ -78,7 +79,7 @@ video {
   to{opacity: 1;}
 }
 
-#my-qr-reader__dashboard_section div:last-child {
+#qr-reader__dashboard_section div:last-child {
   display: none;
 }
 
