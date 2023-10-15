@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Softbros-QR</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <div id="pigmy-act-no">
         <input type="tel" placeholder="Account No">
     </div>
-    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script defer src="https://unpkg.com/html5-qrcode"></script>
     <script>
         var resultContainer = document.getElementById('qr-reader-results');
         var lastResult, countResults = 0;
