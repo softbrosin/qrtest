@@ -1,34 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Index.html file -->
-<!DOCTYPE html> 
-<html lang="en"> 
-  
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet"
-          href="style.css"> 
-    <title>Softbros QR
-    </title> 
-</head> 
-  
-<body> 
-    <div class="container"> 
-        <h1>Softbros QR</h1> 
-        <div class="section"> 
-            <div id="my-qr-reader"> 
-            </div> 
-        </div> 
-    </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softbros-QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+    <h1>Softbros QR</h1>
+    <div id="qr-reader" style="width:500px"></div>
+    <div id="qr-reader-results"></div>
     <div id="pigmy-act-no">
-        <input type="text" id="act-no" placeholder="Account No">
+        <input type="tel" placeholder="Account No">
     </div>
-    <script
-        src="QRpkg.js"> 
-    </script> 
-    <script src="script.js"></script> 
-</body> 
-  
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script>
+        var resultContainer = document.getElementById('qr-reader-results');
+        var lastResult, countResults = 0;
+
+        function onScanSuccess(decodedText, decodedResult) {
+            if (decodedText !== lastResult) {
+                ++countResults;
+                lastResult = decodedText;
+                // Handle on success condition with the decoded message.
+                document.querySelector('#pigmy-act-no input').value = decodedText
+                document.querySelector('#html5-qrcode-button-camera-stop').click()
+                // console.log(`Scan result ${decodedText}`, decodedResult);
+            }
+        }
+
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+    </script>
+</body>
+
 </html>
