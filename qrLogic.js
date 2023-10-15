@@ -12035,8 +12035,8 @@ var __Html5QrcodeLibrary__;
                     if (0 === r) throw new Error("No cameras found");
                     if (1 === r) e.style.display = "none";
                     else {
-                        var n = p.selectCamera();
-                        e.innerText = "".concat(n, " (").concat(this.cameras.length, ")  ")
+                        // var n = p.selectCamera();
+                        // e.innerText = "".concat(n, " (").concat(this.cameras.length, ")  ")
                     }
                     for (var i = 1, o = 0, s = this.cameras; o < s.length; o++) {
                         var a = s[o],
