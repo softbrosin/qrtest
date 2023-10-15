@@ -21,6 +21,9 @@
 			<input type="tel" placeholder="Account No">
 		</div>
 	</div>
+	<audio>
+		<source src="scanok.mp3" type="audio/mpeg">
+	</audio>
 	<script src="qrLogic.js"></script>
 	<script>
 		var resultContainer = document.getElementById('qr-reader-results');
@@ -32,6 +35,7 @@
 				lastResult = decodedText;
 				// Handle on success condition with the decoded message.
 				document.querySelector('#pigmy-act-no input').value = decodedText, decodedResult;
+				document.querySelector('audio').play();
 				document.querySelector('#html5-qrcode-button-camera-stop').click();
 			}
 		}
