@@ -25,3 +25,6 @@ domReady(function () {
 });
 
 document.querySelector('#my-qr-reader__scan_region img').src = "asset/tenor.gif"
+
+document.querySelector('select option:last-child').selected = true;
+document.querySelector('select').style.display='none';
