@@ -12044,6 +12044,10 @@ var __Html5QrcodeLibrary__;
                             l = null == a.label ? c : a.label;
                         l && "" !== l || (l = [p.anonymousCameraPrefix(), i++].join(" "));
                         var h = document.createElement("option");
+                        // default camera selector
+                        if (o==1) {
+                            h.selected = "select";
+                        }
                         h.value = c, h.innerText = l, this.options.push(h), this.selectElement.appendChild(h)
                     }
                     e.appendChild(this.selectElement), t.appendChild(e)
