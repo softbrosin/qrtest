@@ -1,10 +1,3 @@
-:not(input):not(textarea):not(button) {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    /* user-select: none; */
-    -webkit-tap-highlight-color: transparent;
-}
-
 * {
   opacity: 1;
   transition: opacity .6s;
@@ -34,7 +27,7 @@ button:hover {
 #qr-shaded-region {
   border-color: transparent !important;
   border-radius: 58px;
-  border-width: 44px 66px !important;
+  border-width: 32px 54px !important;
   margin: auto;
 
 }
@@ -55,13 +48,13 @@ button:hover {
 }
 
 #qr-reader video {
-  border-radius: 26px;
+  border-radius: 12px !important;
   animation: smoothopen .4s;
-  max-width: 266px;
+  max-width: 250px !important;
   height: auto;
   margin: auto;
-  max-height: 266px;
-
+  max-height: 250px !important;
+  object-fit: cover;
 }
 
 #qr-shaded-region div {
