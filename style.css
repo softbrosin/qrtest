@@ -108,6 +108,7 @@ button:hover {
   color: #36363643;
   outline: none;
   user-select: none ;
+  display: none;
 }
 
 #qr-reader__dashboard_section_csr select option {
