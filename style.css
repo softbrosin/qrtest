@@ -4,6 +4,13 @@
   scroll-behavior: smooth;
 }
 
+:not(input):not(textarea):not(button) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  /* user-select: none; */
+  -webkit-tap-highlight-color: transparent;
+}
+
 button {
   padding: 10px 20px;
   border: 1px solid #b2b2b2;
