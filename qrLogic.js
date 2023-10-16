@@ -12387,3 +12387,4 @@ if (window) {
         var Html5QrcodeScanType = window.__Html5QrcodeLibrary__.Html5QrcodeScanType;
     }
 }
+                            
